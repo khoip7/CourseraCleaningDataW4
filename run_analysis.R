@@ -58,5 +58,5 @@ wearableTidy = wearableTidy[order(wearableTidy$subject),]
 
 #FINALLY, WE HAVE TWO DATASET THAT SATISFIED THE REQUIREMENT: wearableData AND wearableTidy
 #TO SAVE THE DATASETS, RUN THESE LINES:
-write.csv(wearableData, "wearableData.csv",row.names=FALSE)
-write.csv(wearableTidy, "wearableTidy.csv",row.names=FALSE)
+write.table(wearableData, "wearableData.txt",row.names=FALSE)
+write.table(wearableTidy, "wearableTidy.txt",row.names=FALSE)
