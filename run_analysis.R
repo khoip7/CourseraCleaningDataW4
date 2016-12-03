@@ -33,8 +33,8 @@ activityTrain = read.table("train/y_train.txt", col.names = "activity")
 activityTest = read.table("test/y_test.txt", col.names = "activity")
 activityLabels = read.table("activity_labels.txt", col.names = c("idx","labels"))
 
-acLabelsTrain  = as.character(merge(activityTrain,activityLabels, by.x = "activity", by.y = "idx")[,2])
-acLabelsTest  = as.character(merge(activityTest,activityLabels, by.x = "activity", by.y = "idx")[,2])
+acLabelsTrain  = unlist(lapply(activityTrain$activity, function(x) activityLabels$labels[match(x, activityLabels$idx)]))
+acLabelsTest  = unlist(lapply(activityTest$activity, function(x) activityLabels$labels[match(x, activityLabels$idx)]))
 
 #       Remove unecessary variable
 remove(list = c("activityTrain", "activityTest", "activityLabels", "colInfo", "colIdx", "colNames", "replaceInfo"))
