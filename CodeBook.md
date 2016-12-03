@@ -7,7 +7,7 @@ DESCRIPTION: After run the script, we have two variable ("wearableData" and "wea
 	+ Number of records: 10299
 - "wearableTidy" and "wearableTidy.txt"
 	+ Number of variables: 68
-	+ Number of records: 40
+	+ Number of records: 180
 - Detail about variables: the first two variables are the subject and activity, the last 66 variables is the he measurements on the mean and standard deviation for each measurement read file "feature_info.txt" for more information about the measurement.
 
 - How the script works:
